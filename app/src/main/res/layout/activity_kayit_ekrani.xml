@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KayitEkrani">
+
+  <TextView
+      android:id="@+id/uygulamaismii"
+      android:layout_width="396dp"
+      android:layout_height="108dp"
+      android:layout_marginBottom="52dp"
+      android:autoSizeTextType="none"
+      android:fontFamily="@font/kavoon"
+      android:gravity="center"
+      android:text="Benimle Oynar Mısın Anne?"
+      android:textColor="#F10909"
+      android:textSize="34sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.466"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/tv_uyarii"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:fontFamily="@font/artifika"
+      android:text="Kayıt olmanız için tüm alanları doldurmanız gerekmektedir"
+      android:textColor="#373434"
+      android:textSize="15dp"
+      android:gravity="center"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_margin="20dp"
+      app:layout_constraintTop_toBottomOf="@id/uygulamaismii" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tıl_isim"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/tv_uyarii"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_margin="20dp"
+      android:hint="İsminizi Giriniz"
+    >
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tıet_isim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/artifika"
+      />
+  </com.google.android.material.textfield.TextInputLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tıl_soyisim"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/tıl_isim"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:hint="Soyadınızı Giriniz"
+      android:layout_margin="20dp"
+    >
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tıet_soyisim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/artifika"
+      />
+
+  </com.google.android.material.textfield.TextInputLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tıl_eposta"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/tıl_soyisim"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_margin="20dp"
+      android:hint="Eposta Adresinizi Giriniz"
+    >
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tıet_eposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/artifika"
+      />
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btn_kayitol"
+      android:layout_width="0dp"
+      android:layout_height="60dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tıl_sifre"
+      android:layout_margin="20dp"
+      android:background="@drawable/btn_shape"
+      android:text="Kayıt Ol"
+      android:fontFamily="@font/artifika"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+    />
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tıl_sifre"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/tıl_eposta"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:hint="Şifrenizi Giriniz"
+      app:endIconMode="password_toggle"
+      android:layout_margin="20dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tıet_sifre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:fontFamily="@font/artifika"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

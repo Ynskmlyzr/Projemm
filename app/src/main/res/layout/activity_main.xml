@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+
+        android:id="@+id/tv_hosgeldin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/artifika"
+        android:textStyle="bold"
+        android:text="Hoş geldiniz!"
+        android:textColor="#373434"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uygulamaismi" />
+
+    <TextView
+        android:id="@+id/tv_yazi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+
+        android:fontFamily="@font/artifika"
+        android:gravity="center_horizontal"
+        android:text="Uygulamamızı daha verimli kullanabilmek için lütfen kayıt olun"
+        android:textColor="#373434"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hosgeldin"
+
+        />
+
+    <TextView
+        android:id="@+id/uygulamaismi"
+        android:layout_width="396dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="52dp"
+        android:autoSizeTextType="none"
+        android:fontFamily="@font/kavoon"
+        android:gravity="center"
+        android:text="Benimle Oynar Mısın Anne?"
+        android:textColor="#F10909"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hosgeldin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tıl_epostaa"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_yazi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Eposta Adresinizi Giriniz"
+        android:layout_margin="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/artifika"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_uyari1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Geçerli bir eposta adresinizi giriniz"
+        android:textColor="#45000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tıl_epostaa" />
+
+    <TextView
+        android:id="@+id/tv_uyari2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Kendiniz için kolay hatırlayabilecek şifre giriniz"
+        android:textColor="#45000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tıl_sifree" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tıl_sifree"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_uyari1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:hint="Şifrenizi Giriniz"
+        app:endIconMode="password_toggle"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/artifika"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/giris"
+        android:id="@+id/bt_giris"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#F60404"
+        android:fontFamily="@font/artifika"
+        android:shadowColor="@color/white"
+        android:text="Giriş Yap"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_uyari2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_kayit"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_shape"
+        android:fontFamily="@font/artifika"
+        android:text="Kayıt Ol"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_giris" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kayıtlı değilseniz"
+        app:layout_constraintTop_toBottomOf="@id/bt_giris"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/artifika"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

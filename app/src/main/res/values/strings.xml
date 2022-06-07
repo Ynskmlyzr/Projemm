@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Benimle Oynar Mısın Anne</string>
+    <string name="welcome">Hoşgeldiniz %1$s %2$s </string>
+</resources>
